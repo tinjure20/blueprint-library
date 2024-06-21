@@ -1,15 +1,24 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"preferredVersions": {
+	"meta": {
+		"title": "site content",
+		"description": "Blueprint example of importing local content",
+		"author": "tinjure20",
+		"categories": ["themes", "content"]
+	},
+    
+    "preferredVersions": {
 		"php": "8.0",
 		"wp": "beta"
 	},
-	"landingPage": "/wp-admin/post.php?post=6&action=edit",
-	"login": true,
+
 	"features": {
 		"networking": true
 	},
 	"steps": [
+        {
+			"step": "login"
+		},
 		{
 			"step": "setSiteOptions",
 			"options": {
