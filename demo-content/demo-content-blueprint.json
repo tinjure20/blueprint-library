@@ -1,0 +1,61 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "site content",
+		"description": "Blueprint example to add content and plugins to explore a theme",
+		"author": "tinjure20",
+		"categories": ["themes", "content"]
+	},
+	"preferredVersions": {
+		"php": "8.0",
+		"wp": "beta"
+	},
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "login"
+		},
+        {
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "My Playground"
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/theme-test-data/master/themeunittestdata.wordpress.xml"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "create-block-theme"
+			},
+			"progress": {
+				"weight": 2
+			}
+		},
+        {
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "gutenberg"
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "wordpress.org/themes",
+				"slug": "twentytwentyfour"
+			},
+			"options": {
+				"activate": true
+			}
+		}
+	]
+}
