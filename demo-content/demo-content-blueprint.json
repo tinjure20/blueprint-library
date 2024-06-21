@@ -1,8 +1,9 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	
 	"meta": {
 		"title": "site content",
-		"description": "Blueprint example to add content and plugins to explore a theme",
+		"description": "Blueprint example of importing local content",
 		"author": "tinjure20",
 		"categories": ["themes", "content"]
 	},
