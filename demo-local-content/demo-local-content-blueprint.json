@@ -33,6 +33,23 @@
 			},
 			"userId": 1
 		},
+        {
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "create-block-theme"
+			},
+			"progress": {
+				"weight": 2
+			}
+		},
+        {
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "gutenberg"
+			}
+		},
 		{
 			"step": "installTheme",
 			"themeZipFile": {
