@@ -63,6 +63,13 @@
 				"resource": "url",
 				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/test-site-content/gutenberg-test-data.xml"
 			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/test-site-content/considerthis.Wordpress.xml"
+			}
 		}
 	]
 }
