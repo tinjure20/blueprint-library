@@ -61,14 +61,14 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/demo-local-content/considerthis.wordpress.xml"
+				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/test-site-content/considerthis.wordpress.xml"
 			}
 		},
         {
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/demo-local-content/gutenberg-test-data.xml"
+				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/test-site-content/gutenberg-test-data.xml"
 			}
 		}
 	]
