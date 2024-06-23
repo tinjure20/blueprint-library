@@ -57,18 +57,11 @@
 				"slug": "twentytwentyfour"
 			}
 		},
-		{
-			"step": "importWxr",
-			"file": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/test-site-content/considerthis.wordpress.xml"
-			}
-		},
         {
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/test-site-content/gutenberg-test-data.xml"
+				"url": "https://raw.githubusercontent.com/Automattic/theme-tools/master/gutenberg-test-data/gutenberg-test-data.xml"
 			}
 		}
 	]
