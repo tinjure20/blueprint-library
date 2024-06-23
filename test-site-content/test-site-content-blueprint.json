@@ -1,0 +1,75 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "site content",
+		"description": "Blueprint example of importing local content",
+		"author": "tinjure20",
+		"categories": ["themes", "content"]
+	},
+    
+    "preferredVersions": {
+		"php": "8.0",
+		"wp": "beta"
+	},
+
+	"features": {
+		"networking": true
+	},
+	"steps": [
+        {
+			"step": "login"
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Playground Sandbox"
+			}
+		},
+		{
+			"step": "updateUserMeta",
+			"meta": {
+				"admin_color": "modern",
+				"show_welcome_panel": 0
+			},
+			"userId": 1
+		},
+        {
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "create-block-theme"
+			},
+			"progress": {
+				"weight": 2
+			}
+		},
+        {
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "gutenberg"
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "wordpress.org/themes",
+				"slug": "twentytwentyfour"
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/demo-local-content/considerthis.wordpress.xml"
+			}
+		},
+        {
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/demo-local-content/gutenberg-test-data.xml"
+			}
+		}
+	]
+}
