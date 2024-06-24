@@ -58,7 +58,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://github.com/tinjure20/blueprint-library/blob/main/sandbox-site/sandbox-site-content%20.xml"
+				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main/sandbox-site/sandbox-site-content%20.xml"
 			}
 		},
         {
