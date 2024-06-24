@@ -1,0 +1,72 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "site content",
+		"description": "Blueprint for quickly spinning a site with some dummy content",
+		"author": "tinjure20",
+		"categories": ["themes", "content"]
+	},
+    "preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"features": {
+		"networking": true
+	},
+	"steps": [
+        {
+			"step": "login"
+		},
+        {
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "My Sandbox Site"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "gutenberg"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "create-block-theme"
+			},
+			"progress": {
+				"weight": 2
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
+		},
+        {
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "wordpress.org/themes",
+				"slug": "twentytwentyfour"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/tinjure20/blueprint-library/main//sandbox-site/sandbox-site-content.xml"
+			}
+		},
+        {
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/Automattic/theme-tools/master/gutenberg-test-data/gutenberg-test-data.xml"
+			}
+		}
+	]
+}
